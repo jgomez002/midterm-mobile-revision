@@ -1,0 +1,229 @@
+/* Code from midterm pages !! Will design web first oriented */
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+body, html{
+  padding: .4em;
+  margin: .2em;
+  height: 100%;
+  background-size: cover;
+}
+
+@font-face{
+  font-family: title;
+  src: url(library/handy-quomte-font/HandyQuomteRegular-6YLLo.ttf);
+}
+
+ h3{
+   font-family: 'Cormorant Garamond', serif;
+   font-weight: bold;
+   font-size: 40px
+ }
+
+ h1{
+font-family: title;
+font-size: 10vmin;
+ }
+
+ p,label,input{
+font-family: 'Cormorant Garamond', serif;
+font-size: 25px;
+text-align: center;
+ }
+ div,h1,p,h3,img, br{
+   display: flex;
+ }
+h3{
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+}
+.bg1{
+background-color: #c9ada7;
+ }
+ .bg2{
+background-color: #DEDBD2;
+ }
+.parallax {
+  /* The image used */
+  background-image: url("https://i.pinimg.com/564x/43/93/eb/4393eb5021b82ca6aa121ac46653f008.jpg");
+  opacity: 70%;
+  /* Set a specific height */
+  height: 100%;
+  width: 100%;
+  margin: 40px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ .navbar {
+     overflow: hidden;
+     background-color: #c9ada7;
+     width: 100%;
+     font-family: 'Cormorant Garamond', serif;
+     font-weight: 500;
+     z-index: 500;
+}
+      .navbar a {
+        display: flex;
+        color: #4A5759;
+        padding: 14px 25px;
+        text-decoration: none;
+        font-size: 3vmin;
+      }
+
+      .navbar a:hover {
+        background: #F7E1D7;
+        color: #EDAFB8;
+      }
+
+      .navbar a.active {
+        border-bottom: 5rem solid #EDAFB8;
+        border-right: 5rem solid #EDAFB8;
+        border-top: 5rem solid #EDAFB8;
+      }
+
+ .allignleft{
+  display: flex;
+justify-content: flex-start;
+ }
+
+.allignright{
+display: flex;
+justify-content: flex-end;
+}
+
+.centerallign{
+  display: flex;
+   justify-content:center;
+ }
+
+.color-beige{
+color: #F7E1D7;
+ }
+ .color-lightgreen{
+  color: #4A5759;
+}
+.color-boldpink{
+color: #D099A1;
+}
+.color-bg{
+  color: #c9ada7;
+}
+ /* Typing out effect from css-tricks */
+  /* https://css-tricks.com/snippets/css/typewriter-effect/ */
+ @keyframes typing {
+   from { width: 0 }
+   to { width: 30vw }
+ }
+
+ @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: inherit; }
+}
+
+
+ .typed-out {
+   overflow: hidden;
+   border-right: .15em solid white;
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing: .15em;
+   animation:
+     typing 2.5s steps(40, end),
+     blink-caret .75s step-end infinite;
+
+ }
+
+ .item{
+   display: grid;
+ }
+
+ #mainsec{
+   display: grid;
+   margin-top: 3vh;
+   margin-bottom: 3vh;
+   margin-left: 3vw;
+   margin-right: 3vw;
+   grid-template-columns: repeat(2,1fr);
+   grid-column: 1/span 2;
+   grid-template-rows: repeat(1,1fr);
+   grid-column-gap: 2.5vmin;
+   grid-row-gap: 2.5vmin;
+ }
+
+ #bottomsec{
+   display: grid;
+   margin-top: 3vh;
+   margin-bottom: 3vh;
+   margin-left: 3vw;
+   margin-right: 3vw;
+   grid-template-columns: repeat(1,1fr);
+   grid-column: 1/span 2;
+   grid-template-rows: repeat(1,1fr);
+   grid-row: 2/span 2;
+ }
+
+ .textbox{
+   display: flex;
+    background-color: #F7E1D7;
+    color: #EDAFB8;
+    height: inherit;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+
+ }
+
+ .textbox3{
+    background-color: #c9ada7;
+    color: #EDAFB8;
+    height: inherit;
+    width: 70%;
+    margin-left:2rem;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ /* adjustments for mobile browsers */
+ @media only screen and (max-width: 768px) {
+   h1{
+   font-size: 15vmin;
+   }
+
+   @keyframes typing {
+     from { width: 0 }
+     to { width: 50vw }
+   }
+
+   .typed-out {
+     border-right: .15em solid white;
+     letter-spacing: .20em;
+     animation:
+       typing 2.5s steps(20, end),
+       blink-caret .75s step-end infinite;
+   }
+   #mainsec{
+     grid-template-columns: repeat(1,1fr);
+     grid-column: 1/span 1;
+     grid-template-rows: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+   }
+   #bottomsec{
+     grid-template-columns: repeat(1,1fr);
+     grid-column: 1/span 1;
+     grid-template-rows: repeat(1,1fr);
+      grid-template-rows: repeat(1,1fr);
+   }
+ }

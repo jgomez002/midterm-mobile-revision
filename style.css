@@ -182,6 +182,7 @@ color: #D099A1;
     width: 100%;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2em;
 
 
  }
@@ -197,9 +198,21 @@ color: #D099A1;
  }
 
  /* adjustments for mobile browsers */
- @media only screen and (max-width: 768px) {
+ @media screen and (max-width: 414px) {
    h1{
-   font-size: 15vmin;
+   font-size: 13vmin;
+   }
+
+   h3{
+     font-family: 'Cormorant Garamond', serif;
+     font-weight: bold;
+     font-size: 10vmin;
+   }
+
+   p,label,input{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5vmin;
+  text-align: center;
    }
 
    @keyframes typing {
@@ -226,4 +239,15 @@ color: #D099A1;
      grid-template-rows: repeat(1,1fr);
       grid-template-rows: repeat(1,1fr);
    }
+
+  .navbar a {
+    display: flex;
+    color: #4A5759;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 4.5vmin;
+
+}
+
+
  }
